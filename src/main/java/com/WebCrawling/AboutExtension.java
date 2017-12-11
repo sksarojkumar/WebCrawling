@@ -6,7 +6,6 @@ package com.WebCrawling;
 
 public class AboutExtension {
 	
-	//'category' , 'filTpe' , 'format' , 'description' , 'usage' , 'mimeType' , 'applications' are properties about a extension
 		private String category;
 		private String fileTpe;
 		private String format;
