@@ -7,7 +7,7 @@ import java.io.IOException;
 
 
 /**
- * This class will save information about extension in a file .
+ * This class will save information about extension in a file.
  */
 public class SavingExtensionInfo {
 	private static int counter ;
@@ -16,7 +16,7 @@ public class SavingExtensionInfo {
 	}
 	
 	/**
-	 * @param extension : this is a extension given by user like 'pdf'
+	 * @param extension : this is a extension given by user like '.PDF'
 	 * @param aboutExtension : This is a AbuotExtension class object which containing information about extension 
 	 * @param fileToStoreExtensionInformation : this is file where we will store information
 	 */

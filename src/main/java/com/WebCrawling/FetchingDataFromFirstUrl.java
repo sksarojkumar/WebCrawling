@@ -13,6 +13,7 @@ import org.jsoup.select.Elements;
  * this class will fetch data from "https://fileinfo.com" 
  *
  */
+
 public class FetchingDataFromFirstUrl extends Thread {
 	private String extension;
 	private AboutExtension aboutExtension;
@@ -79,7 +80,7 @@ public class FetchingDataFromFirstUrl extends Thread {
 	        aboutExtension.setCategory(categories.toString());
 	        aboutExtension.setFormat(formats.toString());
 		}catch(IOException e){
-			//System.err.println("data fetching error for extension " +extension+ "from https://fileinfo.com");
+			System.err.println("data fetching error for extension " +extension+ "from https://fileinfo.com");
 		}catch(ArrayIndexOutOfBoundsException e){
 			
 		}
