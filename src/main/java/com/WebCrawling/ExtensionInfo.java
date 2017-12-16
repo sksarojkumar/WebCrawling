@@ -21,16 +21,16 @@ public class ExtensionInfo implements Runnable {
 		try{
 			AboutExtension aboutExtension = new AboutExtension();
 			FetchingDataFromFirstUrl obj1 = new FetchingDataFromFirstUrl(extension,aboutExtension);
-//			FetchingDataFromSecondUrl obj2 = new FetchingDataFromSecondUrl(extension,aboutExtension);
-//			FetchingDataFromThirdUrl obj3 = new FetchingDataFromThirdUrl(extension,aboutExtension);
+			FetchingDataFromSecondUrl obj2 = new FetchingDataFromSecondUrl(extension,aboutExtension);
+			FetchingDataFromThirdUrl obj3 = new FetchingDataFromThirdUrl(extension,aboutExtension);
 
 			obj1.start();
-//			obj2.start();
-//			obj3.start();
+			obj2.start();
+			obj3.start();
 			try{
 		    	obj1.join();
-//		    	obj2.join();
-//		    	obj3.join(); 
+		    	obj2.join();
+		    	obj3.join(); 
 		    }catch(InterruptedException e){}
 			
 			new SavingExtensionInfo().printExtensionInfo(extension, aboutExtension, fileToStoreExtensionInformation);

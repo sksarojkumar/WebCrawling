@@ -22,7 +22,6 @@ public class FetchingDataFromThirdUrl extends Thread {
 	public void run(){
 		try{
 			Document doc = Jsoup.connect("https://pc.net/extensions/file/"+extension).timeout(30000).get();
-			//Document doc = Jsoup.connect("https://pcext.net/extentsion/file/").get();
 	        //fetching file type 
 	        Elements elementsForFileType = doc.select("table.display tr:eq(0) th:eq(1)");
 	        ArrayList<String> fileTypes = new ArrayList<String>();
@@ -46,7 +45,7 @@ public class FetchingDataFromThirdUrl extends Thread {
 	        }
 	        
 	        //fetching description
-	        Elements elementsOfDescription = doc.select("table.display tbody tr:eq(4) td:eq(1)"); 	//get desc of element
+	        Elements elementsOfDescription = doc.select("table.display tbody tr:eq(4) td:eq(1)");
 	        StringBuilder description = new StringBuilder();
 	        if(elementsOfDescription.size()>0 && elementsForFileType.size()>0){
 	        	int index = 0;

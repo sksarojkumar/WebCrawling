@@ -21,13 +21,12 @@ public class FetchingDataFromSecondUrl extends Thread {
 	public void run(){
 		try{
 			Document doc = Jsoup.connect("http://filext.com/file-extension/"+extension).timeout(30000).get();
-			//Document doc = Jsoup.connect("http://fileext.com/file/").get();
 			//fetching associate application and then set in aboutExtension
 			Elements associateApplications = doc.select("div#extended-info ul li");
 			StringBuilder text = new StringBuilder();
 			if(associateApplications.size()>0){
 				for(Element application : associateApplications){
-					text.append("\t"+application.select("span:eq(0)").text()+"\n");	//appending file
+					text.append("\t"+application.select("span:eq(0)").text()+"\n");
 				}
 			}else{
 				text.append("Not Available");
